@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="260" viewBox="0 0 260 260">
+  <defs>
+    <clipPath id="clip-Favikon">
+      <rect width="260" height="260"/>
+    </clipPath>
+  </defs>
+  <g id="Favikon" clip-path="url(#clip-Favikon)">
+    <rect width="260" height="260" fill="#333"/>
+    <g id="Group_1" data-name="Group 1">
+      <text id="C" transform="translate(-1 146)" fill="#dd81ff" font-size="180" font-family="RampartOne-Regular, Rampart One"><tspan x="0" y="0">C</tspan></text>
+      <text id="C-2" data-name="C" transform="translate(130 245)" fill="#dd81ff" font-size="180" font-family="RampartOne-Regular, Rampart One"><tspan x="0" y="0">C</tspan></text>
+      <text id="C-3" data-name="C" transform="translate(-1 146)" fill="#dd81ff" font-size="180" font-family="RampartOne-Regular, Rampart One"><tspan x="0" y="0">C</tspan></text>
+      <text id="C-4" data-name="C" transform="translate(130 245)" fill="#dd81ff" font-size="180" font-family="RampartOne-Regular, Rampart One"><tspan x="0" y="0">C</tspan></text>
+    </g>
+  </g>
+</svg>
