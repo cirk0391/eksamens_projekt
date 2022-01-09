@@ -1,0 +1,84 @@
+/* Globel style */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  font-size: 5rem;
+  font-family: "Rampart One", cursive;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  padding: none;
+}
+/* ---------------------body header og footer---------------------- */
+body {
+  background-color: #f4e2f8;
+}
+
+header {
+  background-color: #d4c7d9;
+  display: flex;
+  border-bottom: 1px solid;
+  border-color: black;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  padding-left: 10px;
+}
+
+footer img {
+  max-width: 4%;
+}
+
+footer {
+  background-color: #d4c7d9;
+  border-top: 1px solid;
+  border-color: black;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+/* -------------------forside--------------------- */
+
+#forside {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#forside img {
+  max-width: 80%;
+  clip-path: circle(42% at 50% 42%);
+}
+@media (min-width: 800px) {
+  #forside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr;
+  }
+}
