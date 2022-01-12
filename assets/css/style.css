@@ -21,14 +21,20 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
+  font-family: "Noto Serif", serif;
 }
 
 h3 {
   font-size: 1.2rem;
+  font-family: "Noto Serif", serif;
 }
 
+h4 {
+  font-family: "Noto Serif", serif;
+}
 p {
   font-size: 1rem;
+  font-family: "Mukta", sans-serif;
 }
 
 a {
@@ -38,20 +44,20 @@ a {
 
 ul {
   list-style: none;
-  padding: none;
+}
+
+body {
+  background-color: #f4e2f8;
 }
 
 /* -------------------knap----------------- */
 button {
   background-color: #e8b5f3;
   box-shadow: 3px 3px 1px grey;
+  place-content: end;
 }
 
-/* ---------------------body header og footer---------------------- */
-body {
-  background-color: #f4e2f8;
-  margin: 0 0 71px;
-}
+/* ---------------------header---------------------- */
 
 header {
   background-color: #d4c7d9;
@@ -59,46 +65,71 @@ header {
   border-bottom: 1px solid;
   border-color: black;
   justify-content: space-between;
-  padding-top: 10px;
-}
-
-.logo {
-  font-family: "Poppins", sans-serif;
-  color: #000;
+  padding-top: 20px;
   padding-left: 10px;
 }
+
+.logo a {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+/* -------------------navigation--------------------- */
 
 /* skjul navigations menu i mobil version */
 nav {
   display: none;
 }
 
-footer img {
-  max-width: 4%;
+nav.shown {
+  display: inline-block;
 }
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+}
+
+/* -------------------footer--------------------- */
 
 footer {
   background-color: #d4c7d9;
   border-top: 1px solid;
   border-color: black;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 10px;
   text-align: center;
   position: absolute;
   bottom: 0;
+  max-height: 70px;
 }
-@media (min-width: 800px) {
-  nav {
-    display: flex;
-    flex-flow: row;
-  }
 
+.contactinfo {
+  display: flex;
+  flex-flow: column;
+  font-size: 1rem;
+  font-family: "Mukta", sans-serif;
+  background-color: #d4c7d9;
+}
+
+footer img {
+  max-width: 15%;
+  gap: 10px;
+}
+
+.somelinks {
+  display: flex;
+  flex-flow: row;
+  max-width: 100%;
+  background-color: #d4c7d9;
+}
+
+@media (min-width: 800px) {
   footer {
     display: flex;
-    flex-flow: row;
+    background-color: #d4c7d9;
   }
-  footer img {
-    max-width: 10%;
+  .somelinks {
+    background-color: #d4c7d9;
   }
 }
 /* -------------------forside--------------------- */
@@ -109,7 +140,7 @@ footer {
 }
 
 #forside img {
-  max-width: 80%;
+  max-width: 400px;
   clip-path: circle(42% at 50% 42%);
   display: block;
   margin-left: auto;
@@ -123,25 +154,24 @@ footer {
 @media (min-width: 800px) {
   #forside {
     display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
-  }
-  #forside img {
-    display: inline-grid;
-    grid-column: 3/4;
-  }
-  #forside h1 {
-    grid-column: 3/2;
-    grid-row: 2/3;
+  #forside .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 /* --------------test af burger menu--------------- */
 
-.container {
+.burger {
   display: inline-block;
   cursor: pointer;
-  padding-right: 10px;
+  padding: 10px;
 }
 
 .bar1,
@@ -170,12 +200,7 @@ footer {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
-/* skjul burgermenu i ikke mobil version */
-@media (min-width: 800px) {
-  .container {
-    display: none;
-  }
-}
+
 /* ----------------portfolie side----------------- */
 
 #portfolie {
@@ -240,6 +265,7 @@ footer {
     justify-content: space-between;
     max-width: 1200px;
   }
+
   #ux {
     display: flex;
     flex-wrap: nowrap;
@@ -266,12 +292,14 @@ footer {
   }
   #portfolie .text {
     max-width: 400px;
+    padding: 20px;
   }
 }
 /* -----------------------tema 02 siden----------------- */
 #temato {
   display: grid;
   margin: 10px;
+  margin-bottom: 100px;
 }
 #temato h2 {
   padding-bottom: 10px;
@@ -288,7 +316,16 @@ footer {
 @media (min-width: 800px) {
   #temato {
     display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+
+  #temato .content {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 
@@ -296,6 +333,7 @@ footer {
 #tematre {
   display: grid;
   margin: 10px;
+  margin-bottom: 100px;
 }
 #tematre h2 {
   padding-bottom: 10px;
@@ -309,11 +347,25 @@ footer {
   padding-top: 10px;
 }
 @media (min-width: 800px) {
+  #tematre {
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+
+  #tematre .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
 /* -----------------------tema 04 side-------------------- */
 #temafire {
   display: grid;
   margin: 10px;
+  margin-bottom: 100px;
 }
 #temafire h2 {
   padding-bottom: 10px;
@@ -327,11 +379,25 @@ footer {
   padding-top: 10px;
 }
 @media (min-width: 800px) {
+  #temafire {
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+
+  #temafire .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
 /* -------------------tema 05 side----------------- */
 #temafem {
   display: grid;
   margin: 10px;
+  margin-bottom: 100px;
 }
 #temafem h2 {
   padding-bottom: 10px;
@@ -345,15 +411,27 @@ footer {
   padding-top: 10px;
 }
 @media (min-width: 800px) {
+  #temafem {
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+
+  #temafem .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
 /* ---------------------------om mig--------------------- */
 #ommig {
   display: grid;
   padding: 10px;
+  margin-bottom: 100px;
 }
-#ommig img {
-  min-width: none;
-}
+
 #skole {
   border: solid 1px;
   border-color: grey;
@@ -374,6 +452,15 @@ footer {
 @media (min-width: 800px) {
   #ommig {
     display: grid;
-    max-width: 400px;
+    grid-template-rows: 100px 1fr 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+
+  #ommig .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
